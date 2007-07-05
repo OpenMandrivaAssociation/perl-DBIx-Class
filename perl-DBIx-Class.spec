@@ -1,14 +1,9 @@
 %define module	DBIx-Class
 %define name	perl-%{module}
 %define	modprefix DBIx
+%define version 0.08002
+%define release %mkrel 1
 
-%define realversion 0.07000
-%define version 0.07000
-
-%define	rel	2
-%define release %mkrel %{rel}
-
-%define _provides_exceptions perl(DB::Main
 
 Name:		%{name}
 Version:	%{version}
@@ -16,14 +11,15 @@ Release:	%{release}
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Extensible and flexible object <-> relational mapper
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{realversion}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/DBIx/%{module}-%{version}.tar.bz2
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl(Carp::Clan)
 BuildRequires:	perl(Class::C3) >= 0.11
 BuildRequires:	perl(Class::Data::Accessor) >= 0.01
+BuildRequires:	perl(Class::Accessor::Grouped)
 BuildRequires:	perl(Class::Inspector)
 BuildRequires:	perl(Data::Page) >= 2.00
 BuildRequires:  perl(DBD::SQLite) >= 1.11
@@ -34,6 +30,8 @@ BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(SQL::Abstract) >= 1.20
 BuildRequires:	perl(SQL::Abstract::Limit) >= 0.101
 BuildRequires:	perl(Storable)
+BuildRequires:	perl(Scope::Guard)
+BuildRequires:	perl(JSON)
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
 Provides:	perl(DBIx::Class::CDBICompat::ImaDBI)
@@ -86,11 +84,11 @@ records from multiple tables in a single query, JOIN, LEFT JOIN,
 COUNT, DISTINCT, GROUP BY and HAVING support.
 
 %prep
-%setup -q -n %{module}-%{realversion}
+%setup -q -n %{module}-%{version}
 
 %build
-%{__perl} Build.PL installdirs=vendor destdir=%{buildroot}
-./Build
+%{__perl} Makefile.PL installdirs=vendor
+%make
 
 %check
 ##export DBICTEST_PG_DSN="dbi:Pg:dbname=test;host=localhost"
@@ -99,11 +97,11 @@ COUNT, DISTINCT, GROUP BY and HAVING support.
 ##export DBICTEST_MYSQL_DSN="dbi:mysql:database=test;host=localhost"
 ##export DBICTEST_MYSQL_USER=mysqltest
 ##export DBICTEST_MYSQL_PASS='mysqltest'
-./Build test
+make test
 
 %install
 rm -rf %{buildroot}
-./Build install
+%makeinstall_std
 
 %clean 
 rm -rf %{buildroot}
