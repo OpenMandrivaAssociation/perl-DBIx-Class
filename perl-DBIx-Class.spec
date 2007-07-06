@@ -32,6 +32,7 @@ BuildRequires:	perl(SQL::Abstract::Limit) >= 0.101
 BuildRequires:	perl(Storable)
 BuildRequires:	perl(Scope::Guard)
 BuildRequires:	perl(JSON)
+BuildRequires:	perl(Cwd) >= 3.19
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
 Provides:	perl(DBIx::Class::CDBICompat::ImaDBI)
@@ -87,6 +88,8 @@ COUNT, DISTINCT, GROUP BY and HAVING support.
 %setup -q -n %{module}-%{version}
 
 %build
+# latest CWD is not in core
+export PERL5LIB=%{perl_vendorarch}
 %{__perl} Makefile.PL installdirs=vendor
 %make
 
