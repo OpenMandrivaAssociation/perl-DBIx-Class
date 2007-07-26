@@ -1,7 +1,7 @@
 %define module	DBIx-Class
 %define name	perl-%{module}
 %define	modprefix DBIx
-%define version 0.08002
+%define version 0.08003
 %define release %mkrel 1
 
 
@@ -12,7 +12,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Extensible and flexible object <-> relational mapper
 Url:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/DBIx/%{module}-%{version}.tar.bz2
+Source:     http://www.cpan.org/modules/by-module/DBIx/%{module}-%{version}.tar.gz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -90,7 +90,7 @@ COUNT, DISTINCT, GROUP BY and HAVING support.
 %build
 # latest CWD is not in core
 export PERL5LIB=%{perl_vendorarch}
-%{__perl} Makefile.PL installdirs=vendor
+%{__perl} Makefile.PL installdirs=vendor </dev/null
 %make
 
 %check
