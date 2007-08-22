@@ -1,7 +1,7 @@
 %define module	DBIx-Class
 %define name	perl-%{module}
 %define	modprefix DBIx
-%define version 0.08003
+%define version 0.08006
 %define release %mkrel 1
 
 
