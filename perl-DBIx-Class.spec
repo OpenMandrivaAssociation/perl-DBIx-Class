@@ -1,7 +1,7 @@
 %define module	DBIx-Class
 %define name	perl-%{module}
 %define	modprefix DBIx
-%define version 0.08003
+%define version 0.08007
 %define release %mkrel 1
 
 
@@ -16,8 +16,10 @@ Source:     http://www.cpan.org/modules/by-module/DBIx/%{module}-%{version}.tar.
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
+BuildRequires:	perl(Test::Builder) >= 0.33
 BuildRequires:	perl(Carp::Clan)
 BuildRequires:	perl(Class::C3) >= 0.11
+BuildRequires:	perl(Class::C3::Componentised)
 BuildRequires:	perl(Class::Data::Accessor) >= 0.01
 BuildRequires:	perl(Class::Accessor::Grouped)
 BuildRequires:	perl(Class::Inspector)
@@ -89,8 +91,8 @@ COUNT, DISTINCT, GROUP BY and HAVING support.
 
 %build
 # latest CWD is not in core
-export PERL5LIB=%{perl_vendorarch}
-%{__perl} Makefile.PL installdirs=vendor </dev/null
+export PERL5LIB=%{perl_vendorarch}:%{perl_vendorlib}
+%{__perl} Makefile.PL installdirs=vendor --skipdeps
 %make
 
 %check
@@ -100,6 +102,7 @@ export PERL5LIB=%{perl_vendorarch}
 ##export DBICTEST_MYSQL_DSN="dbi:mysql:database=test;host=localhost"
 ##export DBICTEST_MYSQL_USER=mysqltest
 ##export DBICTEST_MYSQL_PASS='mysqltest'
+export PERL5LIB=%{perl_vendorarch}:%{perl_vendorlib}
 make test
 
 %install
