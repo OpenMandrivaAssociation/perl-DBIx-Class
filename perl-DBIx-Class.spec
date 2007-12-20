@@ -74,6 +74,7 @@ Provides:	perl(DBIx::Class::Componentised)
 Provides:	perl(DBIx::Class::ResultSourceProxy)
 Provides:	perl(SQL::Translator::Parser::DBIx::Class)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This is an SQL to OO mapper with an object API inspired by Class::DBI
