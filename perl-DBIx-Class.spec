@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix DBIx
 %define version 0.08010
-%define release %mkrel 3
+%define release %mkrel 1
 
 
 Name:		%{name}
@@ -35,6 +35,7 @@ BuildRequires:	perl(Storable)
 BuildRequires:	perl(Scope::Guard)
 BuildRequires:	perl(JSON)
 BuildRequires:	perl(Cwd) >= 3.19
+BuildRequires:	perl(Test::Exception)
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
 Provides:	perl(DBIx::Class::CDBICompat::ImaDBI)
