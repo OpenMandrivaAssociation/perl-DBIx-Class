@@ -2,8 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix DBIx
 %define version 0.08010
-%define release %mkrel 1
-
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -69,6 +68,7 @@ Provides:	perl(DBIx::Class::Relationship::Accessor)
 Provides:	perl(DBIx::Class::Relationship::HasMany)
 Provides:	perl(DBIx::Class::Relationship::ProxyMethods)
 Provides:	perl(DBIx::Class::Storage)
+Provides:	perl(DBIx::Class::Storage::TxnScopeGuard)
 Provides:	perl(DBIx::Class::ResultSetProxy)
 Provides:	perl(DBIx::Class::ClassResolver::PassThrough)
 Provides:	perl(DBIx::Class::Componentised)
