@@ -37,6 +37,7 @@ BuildRequires:	perl(Sub::Name)
 BuildRequires:	perl(JSON)
 BuildRequires:	perl(Cwd) >= 3.19
 BuildRequires:	perl(Test::Exception)
+BuildRequires:	perl(Test::Warn)
 Requires:	perl(Class::C3::Componentised)
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
