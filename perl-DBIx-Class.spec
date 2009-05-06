@@ -27,6 +27,7 @@ BuildRequires:  perl(DBD::SQLite) >= 1.11
 BuildRequires:  perl(DBI) >= 1.40
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Module::Find)
+BuildRequires:  perl(Path::Class)
 BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(SQL::Abstract) >= 1.20
 BuildRequires:	perl(SQL::Abstract::Limit) >= 0.101
