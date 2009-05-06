@@ -32,6 +32,7 @@ BuildRequires:	perl(SQL::Abstract) >= 1.20
 BuildRequires:	perl(SQL::Abstract::Limit) >= 0.101
 BuildRequires:	perl(Storable)
 BuildRequires:	perl(Scope::Guard)
+BuildRequires:	perl(Sub::Name)
 BuildRequires:	perl(JSON)
 BuildRequires:	perl(Cwd) >= 3.19
 BuildRequires:	perl(Test::Exception)
