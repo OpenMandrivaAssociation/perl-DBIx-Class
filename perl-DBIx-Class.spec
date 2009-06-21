@@ -1,8 +1,8 @@
 %define module	DBIx-Class
 %define name	perl-%{module}
 %define	modprefix DBIx
-%define version 0.08102
-%define release %mkrel 2
+%define version 0.08107
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -12,9 +12,6 @@ Group:		Development/Perl
 Summary:	Extensible and flexible object <-> relational mapper
 Url:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/DBIx/%{module}-%{version}.tar.gz
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:	perl(Test::Builder) >= 0.33
 BuildRequires:	perl(Carp::Clan)
 BuildRequires:	perl(Class::C3) >= 0.11
@@ -95,6 +92,7 @@ COUNT, DISTINCT, GROUP BY and HAVING support.
 
 %prep
 %setup -q -n %{module}-%{version}
+rm -f t/73oracle.t
 
 %build
 %{__perl} Makefile.PL installdirs=vendor --skipdeps
