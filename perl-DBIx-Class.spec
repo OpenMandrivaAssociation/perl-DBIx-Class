@@ -3,6 +3,7 @@
 %define	modprefix DBIx
 %define version 0.08107
 %define release %mkrel 1
+%define _requires_exceptions perl(DBD::Oracle)
 
 Name:		%{name}
 Version:	%{version}
@@ -22,6 +23,7 @@ BuildRequires:	perl(Class::Inspector)
 BuildRequires:	perl(Data::Page) >= 2.00
 BuildRequires:  perl(DBD::SQLite) >= 1.11
 BuildRequires:  perl(DBI) >= 1.40
+BuildRequires:  perl(Hash::Merge)
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Module::Find)
 BuildRequires:  perl(Path::Class)
@@ -72,6 +74,8 @@ Provides:	perl(DBIx::Class::Relationship::HasMany)
 Provides:	perl(DBIx::Class::Relationship::ProxyMethods)
 Provides:	perl(DBIx::Class::Storage)
 Provides:	perl(DBIx::Class::Storage::TxnScopeGuard)
+Provides:   perl(DBIx::Class::Storage::DBI::Replicated::Types)
+Provides:	perl(DBIx::Class::SQLAHacks)
 Provides:	perl(DBIx::Class::ResultSetProxy)
 Provides:	perl(DBIx::Class::ClassResolver::PassThrough)
 Provides:	perl(DBIx::Class::Componentised)
