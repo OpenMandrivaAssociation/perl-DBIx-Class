@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix DBIx
 %define version 0.08107
-%define release %mkrel 1
+%define release %mkrel 2
 %define _requires_exceptions perl(DBD::Oracle)
 
 Name:		%{name}
