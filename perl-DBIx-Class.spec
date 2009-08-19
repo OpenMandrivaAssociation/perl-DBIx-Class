@@ -1,18 +1,18 @@
-%define module	DBIx-Class
-%define name	perl-%{module}
-%define	modprefix DBIx
-%define version 0.08108
-%define release %mkrel 1
+%define upstream_name	 DBIx-Class
+%define upstream_version 0.08109
+
 %define _requires_exceptions perl(DBD::Oracle)
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Extensible and flexible object <-> relational mapper
-Url:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/DBIx/%{module}-%{version}.tar.gz
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(Test::Builder) >= 0.33
 BuildRequires:	perl(Carp::Clan)
 BuildRequires:	perl(Class::C3) >= 0.11
@@ -37,6 +37,10 @@ BuildRequires:	perl(JSON)
 BuildRequires:	perl(Cwd) >= 3.19
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(Test::Warn)
+
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 Requires:	perl(Class::C3::Componentised)
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
@@ -81,8 +85,6 @@ Provides:	perl(DBIx::Class::ClassResolver::PassThrough)
 Provides:	perl(DBIx::Class::Componentised)
 Provides:	perl(DBIx::Class::ResultSourceProxy)
 Provides:	perl(SQL::Translator::Parser::DBIx::Class)
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This is an SQL to OO mapper with an object API inspired by Class::DBI
@@ -95,7 +97,7 @@ records from multiple tables in a single query, JOIN, LEFT JOIN,
 COUNT, DISTINCT, GROUP BY and HAVING support.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 rm -f t/73oracle.t
 
 %build
@@ -122,11 +124,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc Changes README
 %{_bindir}/dbicadmin
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/DBIx
 %{perl_vendorlib}/SQL
 %{_mandir}/man*/*
-
-
-
-
-
