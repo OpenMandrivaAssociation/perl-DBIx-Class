@@ -112,7 +112,7 @@ rm -f t/73oracle.t
 ##export DBICTEST_MYSQL_DSN="dbi:mysql:database=test;host=localhost"
 ##export DBICTEST_MYSQL_USER=mysqltest
 ##export DBICTEST_MYSQL_PASS='mysqltest'
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
