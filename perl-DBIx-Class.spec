@@ -14,28 +14,30 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:	perl(Test::Builder) >= 0.33
 BuildRequires:	perl(Carp::Clan)
+BuildRequires:	perl(Class::Accessor::Grouped)
 BuildRequires:	perl(Class::C3) >= 0.11
 BuildRequires:	perl(Class::C3::Componentised)
 BuildRequires:	perl(Class::Data::Accessor) >= 0.01
-BuildRequires:	perl(Class::Accessor::Grouped)
 BuildRequires:	perl(Class::Inspector)
+BuildRequires:	perl(Cwd) >= 3.19
+BuildRequires:	perl(Data::Dumper::Concise)
 BuildRequires:	perl(Data::Page) >= 2.00
 BuildRequires:  perl(DBD::SQLite) >= 1.11
 BuildRequires:  perl(DBI) >= 1.40
 BuildRequires:  perl(Hash::Merge)
+BuildRequires:	perl(JSON)
+BuildRequires:	perl(JSON::Any)
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Module::Find)
 BuildRequires:  perl(Path::Class)
 BuildRequires:	perl(Scalar::Util)
+BuildRequires:	perl(Scope::Guard)
 BuildRequires:	perl(SQL::Abstract) >= 1.20
 BuildRequires:	perl(SQL::Abstract::Limit) >= 0.101
 BuildRequires:	perl(Storable)
-BuildRequires:	perl(Scope::Guard)
 BuildRequires:	perl(Sub::Name)
-BuildRequires:	perl(JSON)
-BuildRequires:	perl(Cwd) >= 3.19
+BuildRequires:	perl(Test::Builder) >= 0.33
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(Test::Warn)
 
