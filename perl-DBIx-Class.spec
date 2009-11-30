@@ -5,7 +5,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 Epoch:      1
 
 Summary:	Extensible and flexible object <-> relational mapper
@@ -45,6 +45,8 @@ BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 Requires:	perl(Class::C3::Componentised)
+Requires:	perl(DBD::SQLite)
+
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
 Provides:   perl(DBIC::SQL::Abstract)
