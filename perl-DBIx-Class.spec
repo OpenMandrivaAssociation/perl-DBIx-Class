@@ -5,7 +5,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 Epoch:      1
 
 Summary:	Extensible and flexible object <-> relational mapper
@@ -73,22 +73,23 @@ Provides:	perl(DBIx::Class::CDBICompat::Retrieve)
 Provides:	perl(DBIx::Class::CDBICompat::Stringify)
 Provides:	perl(DBIx::Class::CDBICompat::TempColumns)
 Provides:	perl(DBIx::Class::CDBICompat::Triggers)
-Provides:	perl(DBIx::Class::Relationship::CascadeActions)
-Provides:	perl(DBIx::Class::Relationship::ManyToMany)
-Provides:	perl(DBIx::Class::Relationship::HasOne)
-Provides:	perl(DBIx::Class::Relationship::Helpers)
-Provides:	perl(DBIx::Class::Relationship::BelongsTo)
-Provides:	perl(DBIx::Class::Relationship::Accessor)
-Provides:	perl(DBIx::Class::Relationship::HasMany)
-Provides:	perl(DBIx::Class::Relationship::ProxyMethods)
-Provides:	perl(DBIx::Class::Storage)
-Provides:	perl(DBIx::Class::Storage::TxnScopeGuard)
-Provides:   perl(DBIx::Class::Storage::DBI::Replicated::Types)
-Provides:	perl(DBIx::Class::SQLAHacks)
-Provides:	perl(DBIx::Class::ResultSetProxy)
 Provides:	perl(DBIx::Class::ClassResolver::PassThrough)
 Provides:	perl(DBIx::Class::Componentised)
+Provides:	perl(DBIx::Class::Relationship::Accessor)
+Provides:	perl(DBIx::Class::Relationship::BelongsTo)
+Provides:	perl(DBIx::Class::Relationship::CascadeActions)
+Provides:	perl(DBIx::Class::Relationship::HasMany)
+Provides:	perl(DBIx::Class::Relationship::HasOne)
+Provides:	perl(DBIx::Class::Relationship::Helpers)
+Provides:	perl(DBIx::Class::Relationship::ManyToMany)
+Provides:	perl(DBIx::Class::Relationship::ProxyMethods)
+Provides:	perl(DBIx::Class::ResultSetProxy)
 Provides:	perl(DBIx::Class::ResultSourceProxy)
+Provides:	perl(DBIx::Class::SQLAHacks)
+Provides:	perl(DBIx::Class::Storage)
+Provides:	perl(DBIx::Class::Storage::DBIHacks)
+Provides:   perl(DBIx::Class::Storage::DBI::Replicated::Types)
+Provides:	perl(DBIx::Class::Storage::TxnScopeGuard)
 Provides:	perl(SQL::Translator::Parser::DBIx::Class)
 
 %description
