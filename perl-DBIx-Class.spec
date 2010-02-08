@@ -1,11 +1,11 @@
 %define upstream_name	 DBIx-Class
-%define upstream_version 0.08115
+%define upstream_version 0.08117
 
 %define _requires_exceptions perl(DBD::Oracle)
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 Epoch:      1
 
 Summary:	Extensible and flexible object <-> relational mapper
@@ -13,7 +13,6 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstream_version}.tar.gz
-Patch:      DBIx-Class-0.08115-fix-deployment-regression.patch
 
 BuildRequires:	perl(Carp::Clan)
 BuildRequires:	perl(Class::Accessor::Grouped)
@@ -105,7 +104,6 @@ COUNT, DISTINCT, GROUP BY and HAVING support.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch -p 1
 rm -f t/73oracle.t
 
 %build
