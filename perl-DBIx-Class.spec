@@ -1,11 +1,11 @@
 %define upstream_name	 DBIx-Class
-%define upstream_version 0.08120
+%define upstream_version 0.08121
 
 %define _requires_exceptions %perl(DBD::Oracle\\|DBIx::Class::Admin::\\(Types\\|Descriptive\\|Usage\\))
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 Epoch:      1
 
 Summary:	Extensible and flexible object <-> relational mapper
