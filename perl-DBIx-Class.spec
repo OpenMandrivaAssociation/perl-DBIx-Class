@@ -1,5 +1,5 @@
 %define upstream_name	 DBIx-Class
-%define upstream_version 0.08121
+%define upstream_version 0.08123
 
 %define _requires_exceptions %perl(DBD::Oracle\\|DBIx::Class::Admin::\\(Types\\|Descriptive\\|Usage\\))
 
@@ -28,6 +28,7 @@ BuildRequires:  perl(DBI) >= 1.40
 BuildRequires:  perl(Hash::Merge)
 BuildRequires:	perl(JSON)
 BuildRequires:	perl(JSON::Any)
+BuildRequires:  perl(Math::Base36)
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Module::Find)
 BuildRequires:  perl(Path::Class)
