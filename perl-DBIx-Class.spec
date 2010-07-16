@@ -21,6 +21,7 @@ BuildRequires:	perl(Class::C3::Componentised)
 BuildRequires:	perl(Class::Data::Accessor) >= 0.01
 BuildRequires:	perl(Class::Inspector)
 BuildRequires:	perl(Cwd) >= 3.19
+BuildRequires:	perl(Context::Preserve)
 BuildRequires:	perl(Data::Dumper::Concise)
 BuildRequires:	perl(Data::Page) >= 2.00
 BuildRequires:  perl(DBD::SQLite) >= 1.11
@@ -41,6 +42,8 @@ BuildRequires:	perl(Sub::Name)
 BuildRequires:	perl(Test::Builder) >= 0.33
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(Test::Warn)
+BuildRequires:	perl(Try::Tiny)
+BuildRequires:	perl(namespace::clean)
 
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
