@@ -1,5 +1,5 @@
 %define upstream_name	 DBIx-Class
-%define upstream_version 0.08123
+%define upstream_version 0.08124
 
 %define _requires_exceptions %perl(DBD::Oracle\\|DBIx::Class::Admin::\\(Types\\|Descriptive\\|Usage\\))
 
