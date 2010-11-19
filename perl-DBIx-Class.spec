@@ -20,8 +20,9 @@ BuildRequires:	perl(Class::C3) >= 0.11
 BuildRequires:	perl(Class::C3::Componentised)
 BuildRequires:	perl(Class::Data::Accessor) >= 0.01
 BuildRequires:	perl(Class::Inspector)
-BuildRequires:	perl(Cwd) >= 3.19
+BuildRequires:	perl(Config::Any)
 BuildRequires:	perl(Context::Preserve)
+BuildRequires:	perl(Cwd) >= 3.19
 BuildRequires:	perl(Data::Dumper::Concise)
 BuildRequires:	perl(Data::Page) >= 2.00
 BuildRequires:  perl(DBD::SQLite) >= 1.11
