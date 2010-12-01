@@ -5,7 +5,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    %mkrel 5
 Epoch:      1
 
 Summary:	Extensible and flexible object <-> relational mapper
@@ -91,8 +91,11 @@ Provides:	perl(DBIx::Class::Relationship::ProxyMethods)
 Provides:	perl(DBIx::Class::ResultSetProxy)
 Provides:	perl(DBIx::Class::ResultSourceProxy)
 Provides:	perl(DBIx::Class::SQLAHacks)
+Provides:	perl(DBIx::Class::SQLMaker::MSSQL)
+Provides:	perl(DBIx::Class::SQLMaker::MySQL)
 Provides:	perl(DBIx::Class::SQLMaker::Oracle)
 Provides:	perl(DBIx::Class::SQLMaker::OracleJoins)
+Provides:	perl(DBIx::Class::SQLMaker::SQLite)
 Provides:	perl(DBIx::Class::Storage)
 Provides:	perl(DBIx::Class::Storage::DBIHacks)
 Provides:   perl(DBIx::Class::Storage::DBI::Replicated::Types)
