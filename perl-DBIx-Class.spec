@@ -20,7 +20,7 @@ BuildRequires:	perl(Class::C3) >= 0.11
 BuildRequires:	perl(Class::C3::Componentised)
 BuildRequires:	perl(Class::Data::Accessor) >= 0.01
 BuildRequires:	perl(Class::Inspector)
-BuildRequires:	perl(Config::Any)
+BuildRequires:	perl(Config::Any) >= 0.200
 BuildRequires:	perl(Context::Preserve)
 BuildRequires:	perl(Cwd) >= 3.19
 BuildRequires:	perl(Data::Dumper::Concise)
@@ -41,9 +41,10 @@ BuildRequires:	perl(SQL::Abstract::Limit) >= 0.101
 BuildRequires:	perl(Storable)
 BuildRequires:	perl(Sub::Name)
 BuildRequires:	perl(Test::Builder) >= 0.33
-BuildRequires:	perl(Test::Exception)
+BuildRequires:	perl(Test::Exception) >= 0.310
 BuildRequires:	perl(Test::Warn)
 BuildRequires:	perl(Try::Tiny)
+BuildRequires:	perl(Variable::Magic) >= 0.440
 BuildRequires:	perl(namespace::clean)
 
 BuildArch:	noarch
