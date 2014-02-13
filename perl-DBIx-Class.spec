@@ -1,5 +1,5 @@
 %define upstream_name	 DBIx-Class
-%define upstream_version 0.08192
+%define upstream_version 0.08270
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBD::Oracle(.*)\\)|perl\\(DBIx::Class::Admin::(.*)\\)'
@@ -9,14 +9,14 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 Epoch:		1
 
 Summary:	Extensible and flexible object <-> relational mapper
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBIx/DBIx-Class-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Carp::Clan)
@@ -349,4 +349,5 @@ perl Makefile.PL installdirs=vendor --skipdeps
 
 * Tue May 23 2006 Scott Karns <scottk@mandriva.org> 0.06.003-1mdk
 - First mandriva package
+
 

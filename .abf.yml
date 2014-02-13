@@ -1,2 +1,4 @@
+removed_sources:
+  DBIx-Class-0.08192.tar.gz: 081547777e652b8291f702bc8309c76c5a325989
 sources:
-  "DBIx-Class-0.08192.tar.gz": 081547777e652b8291f702bc8309c76c5a325989
+  DBIx-Class-0.08270.tar.gz: dfe29b59acbadaaa0ae811596303c54a176250b8
