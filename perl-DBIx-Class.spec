@@ -9,7 +9,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 Epoch:		1
 
 Summary:	Extensible and flexible object <-> relational mapper
@@ -62,6 +62,8 @@ Requires:	perl(SQL::Abstract)
 ## scottk: The following provides are missed as they appear
 ##      on different lines from their "package" declarations
 Provides:	perl(DBIC::SQL::Abstract)
+Provides:	perl(DBIx::Class::_Util)
+Provides:	perl(DBIx::Class::Carp)
 Provides:	perl(DBIx::Class::CDBICompat::AccessorMapping)
 Provides:	perl(DBIx::Class::CDBICompat::AttributeAPI)
 Provides:	perl(DBIx::Class::CDBICompat::AutoUpdate)
@@ -97,6 +99,8 @@ Provides:	perl(DBIx::Class::Relationship::ManyToMany)
 Provides:	perl(DBIx::Class::Relationship::ProxyMethods)
 Provides:	perl(DBIx::Class::ResultSetProxy)
 Provides:	perl(DBIx::Class::ResultSourceProxy)
+Provides:	perl(DBIx::Class::ResultSource::RowParser)
+Provides:	perl(DBIx::Class::ResultSource::RowParser::Util)
 Provides:	perl(DBIx::Class::SQLAHacks)
 Provides:	perl(DBIx::Class::SQLMaker::MSSQL)
 Provides:	perl(DBIx::Class::SQLMaker::MySQL)
@@ -104,8 +108,10 @@ Provides:	perl(DBIx::Class::SQLMaker::Oracle)
 Provides:	perl(DBIx::Class::SQLMaker::OracleJoins)
 Provides:	perl(DBIx::Class::SQLMaker::SQLite)
 Provides:	perl(DBIx::Class::Storage)
+Provides:	perl(DBIx::Class::Storage::BlockRunner)
 Provides:	perl(DBIx::Class::Storage::DBIHacks)
-Provides:   perl(DBIx::Class::Storage::DBI::Replicated::Types)
+Provides:	perl(DBIx::Class::Storage::DBI::ADO::CursorUtils)
+Provides:       perl(DBIx::Class::Storage::DBI::Replicated::Types)
 Provides:	perl(DBIx::Class::Storage::TxnScopeGuard)
 Provides:	perl(SQL::Translator::Parser::DBIx::Class)
 
