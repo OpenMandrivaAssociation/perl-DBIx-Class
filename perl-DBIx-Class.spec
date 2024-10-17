@@ -15,7 +15,7 @@ Epoch:		1
 Summary:	Extensible and flexible object <-> relational mapper
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/DBIx/DBIx-Class-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
