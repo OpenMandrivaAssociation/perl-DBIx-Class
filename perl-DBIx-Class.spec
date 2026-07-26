@@ -1,6 +1,4 @@
 %define upstream_name	 DBIx-Class
-%define upstream_version 0.08270
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(DBD::Oracle(.*)\\)|perl\\(DBIx::Class::Admin::(.*)\\)'
 %else
@@ -8,15 +6,15 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	0.08270
+Release:	5
 Epoch:		1
 
 Summary:	Extensible and flexible object <-> relational mapper
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/DBIx/DBIx-Class-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/DBIx/DBIx-Class-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -127,7 +125,7 @@ records from multiple tables in a single query, JOIN, LEFT JOIN,
 COUNT, DISTINCT, GROUP BY and HAVING support.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 rm -f t/73oracle.t
 
 %build
